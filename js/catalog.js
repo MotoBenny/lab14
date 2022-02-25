@@ -35,16 +35,21 @@ function handleSubmit(event) {
 
 }
 
-// TODO: Add the selected item and quantity to the cart
+// DONE: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // TODO: suss out the item picked from the select list
-  // TODO: get the quantity
-  // TODO: using those, add one item to the Cart
+  // DONE: suss out the item picked from the select list
+  let product = document.getElementById('items').value;
+  // DONE: get the quantity
+  let quantity = document.getElementById('quantity').value;
+  // DONE: using those, add one item to the Cart
+  cart.addItem(product, quantity);
+  console.log(cart);
 }
 
-// TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
-
+// DONE: Update the cart count in the header nav with the number of items in the Cart
+function updateCounter() { }
+let itemCount = document.getElementById('itemCount');
+itemCount.textContent = cart.length;
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
